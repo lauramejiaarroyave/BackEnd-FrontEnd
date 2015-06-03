@@ -1,0 +1,69 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: orangered">Full Machine List</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="location.href = 'http://localhost:9000/'">Home</a></li>
+        <li><a href="http://localhost:9000/search">Search</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div style="height: 70px"></div>
+
+<div class="container col-md-offset-2 col-md-8" style="background-color: orange" align="center">
+    <label style="color:#0081c2; font-size:50px">Machines For Sale</label>
+    <img src="http://png-5.findicons.com/files/icons/1579/devine/256/machine.png" style="width: 120px" />
+    <p class="lead">Welcome</p>
+</div>
+
+<div class="col-md-8 col-md-offset-2">
+  <br/>
+  <br/>
+  <strong><p align="center" >Machines List</p></strong>
+
+
+  <table class="table" >
+      <br/>
+      <br/>
+
+    <tr ng-repeat="machines in machine">
+          <td >
+            <img src="../assets/images/{{machines.imageMachine}}" height="150px" width="150px" align="left" />
+
+            <strong><font color="#3e6ae3" size="3">	{{machines.nameMachine }}</font></strong>
+            <br/>
+            <br/>
+           <font color="#b20000">Price: ${{machines.priceMachine }} </font>
+            <br/>
+            <strong><font color="#b20000">Discount: {{machines.discountMachine }}% </font></strong>
+            <br/>
+            <br/>
+            <small>In Stock *{{machines.availabilityMachine}}*</small>
+
+          <td width="120px" align="center" >
+            <button type="button" class="btn btn-warning" style="width: 180px" ng-click="redirection(machines.id)">View Detail</button>
+          </td>
+        </tr>
+
+    </table>
+  <br/>
+  <br/>
+</div>
+
+
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-right">
+      <p class="navbar-brand" href="#" style="color: orangered">Designed By</p>
+      <p class="navbar-brand" href="#" style="color: #0081c2">**Laura**</p>
+    </div>
+  </div>
+</nav>
